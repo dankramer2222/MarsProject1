@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mars Background</title>
+    <style>
+        body {
+            background-image: url('https://img3.akspic.ru/crops/5/0/3/6/6/166305/166305-mars-privet_more-planeta-planshet-atmosfera-1920x1080.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>pictures were created at {{ photos[0]['earth_date'] }}</h1>
+    <h2>collected images data gathered by NASA's Perseverance</h2>
+    {% for index, photo in photos %}
+        <p>Photo {{ index }}</p>
+        <img src="{{ photo['img_src'] }}">
+    {% endfor %}
+</body>
+</html>
+
+
